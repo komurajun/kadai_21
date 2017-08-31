@@ -11,23 +11,20 @@ public class pg_ex21 {
 
 	public static void main(String[] arg) throws IOException {
 
+		//ファイル読み込み、出力
 		File fileimput = new File("c:\\temp\\README.md");
-		File fileoutput = new File("c:\\temp\\ANS.md");
+		File fileoutput = new File("c:\\temp\\ans\\invoice.dat");
 		BufferedReader brimput = new BufferedReader(new FileReader(fileimput));
 		BufferedWriter broutput = new BufferedWriter(new FileWriter(fileoutput));
 		String str;
 
 		int kihonryokin = 1000;
-
 		int tuwakihon = 20;
-
 		int hirutokuwaribikikeisan = 5;
 		int tuwakeisan = 0;
-
 		int kazokuflg = 0;
 		int hiruflg = 0;
 		int tuwaans = 0;
-
 		String keiyakudenwa = "";
 		String shikiri = "====================";
 
@@ -40,10 +37,12 @@ public class pg_ex21 {
 		while ((str = brimput.readLine()) != null) {
 
 
-			// 契約情報取得
+
 			int keiyakujoho = Integer.parseInt(str.substring(0, 1));
 
 			if (keiyakujoho == 0) {
+
+				//請求ファイル出力
 				i = 0;
 				j = 0;
 				kazokuflg = 0;
@@ -108,7 +107,6 @@ public class pg_ex21 {
 				}
 
 				tuwaans += tuwakeisan * Integer.parseInt(tuwakaishizikan);
-				System.out.println(tuwaans);
 
 			}
 		}
