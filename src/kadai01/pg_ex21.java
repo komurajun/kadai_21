@@ -12,8 +12,10 @@ public class pg_ex21 {
 	public static void main(String[] arg) throws IOException {
 
 		//ファイル読み込み、出力
-		File fileimput = new File("c:\\temp\\README.md");
-		File fileoutput = new File("c:\\temp\\ans\\invoice.dat");
+		File fileimput = new File("data/record.log");
+		File fileoutput = new File("data/invoice.dat");
+		//File fileimput = new File("data/record.log");
+		//File fileoutput = new File("data/invoice.dat");
 		BufferedReader brimput = new BufferedReader(new FileReader(fileimput));
 		BufferedWriter broutput = new BufferedWriter(new FileWriter(fileoutput));
 		String str;
